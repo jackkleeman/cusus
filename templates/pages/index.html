@@ -21,7 +21,7 @@
     <div class="container-fluid">
         <div class="row visible-xs hidden-xm">
         <center>
-            <a href="index"><img src="../../static/images/cusus.png" width="60%" /></a>
+            <a href="{{ url_for('home') }}"><img src="../../static/images/cusus.png" width="60%" /></a>
             </center>
         </div>
         <div class="row">
@@ -29,7 +29,7 @@
             <div class="col-md-10 col-xs-12">
                 <div class="row vertical-align">
                     <div class="col-sm-3 nopadding hidden-xs">
-                        <a href="index"><img src="../../static/images/cusus.png" width="100%" /></a>
+                        <a href="{{ url_for('home') }}"><img src="../../static/images/cusus.png" width="100%" /></a>
                     </div>
                     <div class="row col-sm-9 col-xs-12 nopadding">
                         <div class="col-md-3 menublock menuhome"><a href="{{ url_for('home') }}" id="home" class="btn nopadding btn-link menu">Home</a></div>
