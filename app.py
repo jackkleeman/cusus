@@ -38,7 +38,7 @@ class User(UserMixin):
         self.id = user_id
 
     def get_name(self):
-        return "Paul Dirac"  # typically the user's name
+        return "Jack Kleeman"  # typically the user's name
 
 @login_manager.user_loader
 @blog_engine.user_loader
@@ -66,7 +66,7 @@ def contact():
 def login():
     user = User("testuser")
     login_user(user)
-    return redirect("/blog")
+    return redirect("/events")
 
 @app.route("/logout/")
 def logout():
