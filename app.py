@@ -2,7 +2,7 @@
 # Imports
 #----------------------------------------------------------------------------#
 
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, session
 from flask_login import UserMixin, LoginManager, \
     login_user, logout_user
 from flask_blogging import SQLAStorage, BloggingEngine
@@ -23,7 +23,7 @@ sql_storage = SQLAStorage(engine, metadata=meta)
 blog_engine = BloggingEngine(app, sql_storage)
 login_manager = LoginManager(app)
 meta.create_all(bind=engine)
-
+bengine = app.extensions["blogging"]
 
 # Automatically tear down SQLAlchemy.
 '''
@@ -52,7 +52,11 @@ def load_user(user_id):
 
 @app.route('/')
 def home():
-    return render_template('pages/index.html')
+    lastpost = sql_storage.get_posts(count=1)
+    print(lastpost)
+    session['title'] = lastpost[0]['title']
+    session['post_id'] = lastpost[0]['post_id']
+    return render_template('pages/index.html', session=session)
 
 @app.route('/about')
 def about():

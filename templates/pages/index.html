@@ -20,8 +20,8 @@
     <header></header>
     <div class="container-fluid">
         <div class="row visible-xs hidden-xm">
-        <center>
-            <a href="{{ url_for('home') }}"><img src="../../static/images/cusus.png" width="60%" /></a>
+            <center>
+                <a href="{{ url_for('home') }}"><img src="../../static/images/cusus.png" width="60%" /></a>
             </center>
         </div>
         <div class="row">
@@ -46,7 +46,7 @@
         document.getElementById("home").style.color = '#2798f7';
         </script>
         <div class="container-fluid gray">
-        <br />
+            <br />
             <div class="row">
                 <div class="container">
                     <div class="row">
@@ -60,6 +60,12 @@
                         <div class="col-md-2"></div>
                         <div class="col-md-8">
                             <div class="center h5 line">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non ipsum semper, euismod neque vitae, maximus mi. Vestibulum sem lorem, faucibus vel lobortis ac, finibus ac nunc. Curabitur facilisis finibus neque non egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac neque at massa dapibus venenatis. Nulla aliquam, urna non vulputate maximus, quam est vestibulum elit, consectetur congue libero quam at turpis. Proin id aliquet odio. Quisque faucibus pulvinar augue id imperdiet. Cras venenatis tortor leo, sed rutrum orci interdum eu. In sodales tellus suscipit nibh mattis, a blandit dolor porta. In sit amet accumsan tellus, vitae sodales mi. Quisque ultricies ut nunc at imperdiet. Integer at consequat ante. </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="center h5 line">
+                            Next event: <a href="{{ url_for('blogging.page_by_id', post_id=session.post_id) }}">{{ session.title }}</a>
                         </div>
                     </div>
                     <br>
