@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scaleable=0" />
+    <title>CUSUS</title>
+    <link rel="stylesheet" href="../../static/css/global.css" />
+    <script src="../../static/js/jquery/jquery.js"></script>
+    <script src="../../static/js/bootstrap/bootstrap.min.js">
+    </script>
+    <script src="../../static/js/bootstrap-hover-dropdown.min.js">
+    </script>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans|Source+Code+Pro" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <header></header>
+    <div class="container-fluid">
+        <div class="row visible-xs hidden-xm">
+        <center>
+            <a href="index"><img src="../../static/images/cusus.png" width="60%" /></a>
+            </center>
+        </div>
+        <div class="row">
+            <div class="col-md-1 hidden-xs"></div>
+            <div class="col-md-10 col-xs-12">
+                <div class="row vertical-align">
+                    <div class="col-sm-3 nopadding hidden-xs">
+                        <a href="index"><img src="../../static/images/cusus.png" width="100%" /></a>
+                    </div>
+                    <div class="row col-sm-9 col-xs-12 nopadding">
+                        <div class="col-md-3 menublock menuhome"><a href="{{ url_for('home') }}" id="home" class="btn nopadding btn-link menu">Home</a></div>
+                        <div class="col-md-3 menublock"><a href="{{ url_for('about') }}" id="about" class="btn nopadding btn-link menu">Committee</a></div>
+                        <div class="col-md-3 menublock"><a href="{{ url_for('blogging.index') }}" id="events" class="btn nopadding btn-link menu">Events</a></div>
+                        <div class="col-md-3 menublock"><a href="{{ url_for('contact') }}" id="contact" class="btn nopadding btn-link menu">Contact</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main>
+        <script type="text/javascript">
+        document.getElementById("home").style.color = '#2798f7';
+        </script>
+        <div class="container-fluid gray">
+        <br />
+            <div class="row">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="center h3 line">The Cambridge University StartUp Society runs regular events bringing startup founders, investors, and employees to Cambridge to talk about their diverse work.</div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="center h5 line">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non ipsum semper, euismod neque vitae, maximus mi. Vestibulum sem lorem, faucibus vel lobortis ac, finibus ac nunc. Curabitur facilisis finibus neque non egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac neque at massa dapibus venenatis. Nulla aliquam, urna non vulputate maximus, quam est vestibulum elit, consectetur congue libero quam at turpis. Proin id aliquet odio. Quisque faucibus pulvinar augue id imperdiet. Cras venenatis tortor leo, sed rutrum orci interdum eu. In sodales tellus suscipit nibh mattis, a blandit dolor porta. In sit amet accumsan tellus, vitae sodales mi. Quisque ultricies ut nunc at imperdiet. Integer at consequat ante. </div>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <br>
+            </div>
+        </div>
+    </main>
+    <!--footer-->
+    <!--!= partial("_partials/footer")-->
+    <copyright>
+        <br/>
+        <div class="center grayfont">© 2016 Cambridge University StartUp Society</div>
+    </copyright>
+</body>
+
+</html>

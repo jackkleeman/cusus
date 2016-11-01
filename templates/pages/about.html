@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scaleable=0" />
+    <title>CUSUS</title>
+    <link rel="stylesheet" href="../../static/css/global.css" />
+    <script src="../../static/js/jquery/jquery.js"></script>
+    <script src="https://raw.githubusercontent.com/MichaelPote/jquery.forwardevents/master/jquery.forwardevents.js"></script>
+    <script src="../../static/js/bootstrap/bootstrap.min.js">
+    </script>
+    <script src="../../static/js/bootstrap-hover-dropdown.min.js">
+    </script>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans|Source+Code+Pro" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <header></header>
+    <div class="container-fluid">
+        <div class="row visible-xs hidden-xm">
+            <center>
+                <a href="index"><img src="../../static/images/cusus.png" width="60%" /></a>
+            </center>
+        </div>
+        <div class="row">
+            <div class="col-md-1 hidden-xs"></div>
+            <div class="col-md-10 col-xs-12">
+                <div class="row vertical-align">
+                    <div class="col-sm-3 nopadding hidden-xs">
+                        <a href="index"><img src="../../static/images/cusus.png" width="100%" /></a>
+                    </div>
+                    <div class="row col-sm-9 col-xs-12 nopadding">
+                        <div class="col-md-3 menublock menuhome"><a href="{{ url_for('home') }}" id="home" class="btn nopadding btn-link menu">Home</a></div>
+                        <div class="col-md-3 menublock"><a href="{{ url_for('about') }}" id="about" class="btn nopadding btn-link menu">Committee</a></div>
+                        <div class="col-md-3 menublock"><a href="{{ url_for('blogging.index') }}" id="events" class="btn nopadding btn-link menu">Events</a></div>
+                        <div class="col-md-3 menublock"><a href="{{ url_for('contact') }}" id="contact" class="btn nopadding btn-link menu">Contact</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main>
+        <script type="text/javascript">
+        document.getElementById("about").style.color = '#2798f7';
+        </script>
+        <div class="container-fluid gray">
+        <div class="container" style="width: 80vw;">
+            <br />
+            <div class="row">
+                <div class="col-md-3 col-xs-6">
+                    <div class="circle-avatar" onmouseenter="$('#ct1').css('color','white')" onmouseleave="$('#ct1').css('color','transparent')" style="background-image:url(http://placekitten.com/g/200/200)">
+                    </div>
+                    <div id="ct1" class="circle-text vertical-align">
+                        <div class="center">Luke Harries
+                            <br />President</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6">
+                    <div class="circle-avatar" onmouseenter="$('#ct2').css('color','white')" onmouseleave="$('#ct2').css('color','transparent')" style="background-image:url(http://placekitten.com/g/200/300)"></div>
+                    <div id="ct2" class="circle-text vertical-align">
+                        <div class="center">Luke Harries
+                            <br />President</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6">
+                    <div class="circle-avatar" onmouseenter="$('#ct3').css('color','white')" onmouseleave="$('#ct3').css('color','transparent')" style="background-image:url(http://placekitten.com/g/200/100)"></div>
+                    <div id="ct3" class="circle-text vertical-align">
+                        <div class="center">Luke Harries
+                            <br />President</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6">
+                    <div class="circle-avatar" onmouseenter="$('#ct4').css('color','white')" onmouseleave="$('#ct4').css('color','transparent')" style="background-image:url(http://placekitten.com/g/300/400)"></div>
+                    <div id="ct4" class="circle-text vertical-align">
+                        <div class="center">Luke Harries
+                            <br />President</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6">
+                    <div class="circle-avatar" onmouseenter="$('#ct5').css('color','white')" onmouseleave="$('#ct5').css('color','transparent')" style="background-image:url(http://placekitten.com/g/400/400)"></div>
+                    <div id="ct5" class="circle-text vertical-align">
+                        <div class="center">Luke Harries
+                            <br />President</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6">
+                    <div class="circle-avatar" onmouseenter="$('#ct6').css('color','white')" onmouseleave="$('#ct6').css('color','transparent')" style="background-image:url(http://placekitten.com/g/300/100)">
+                    </div>
+                    <div id="ct6" class="circle-text vertical-align">
+                        <div class="center">Luke Harries
+                            <br />President</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6">
+                    <div class="circle-avatar" onmouseenter="$('#ct7').css('color','white')" onmouseleave="$('#ct7').css('color','transparent')" style="background-image:url(http://placekitten.com/g/200/500)"></div>
+                    <div id="ct7" class="circle-text vertical-align">
+                        <div class="center">Luke Harries
+                            <br />President</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6">
+                    <div class="circle-avatar" onmouseenter="$('#ct8').css('color','white')" onmouseleave="$('#ct8').css('color','transparent')" style="background-image:url(http://placekitten.com/g/200/400)"></div>
+                    <div id="ct8" class="circle-text vertical-align">
+                        <div class="center">Luke Harries
+                            <br />President</div>
+                    </div>
+                </div>
+                <div class="col-md-3 hidden-xs"></div>
+                <div class="col-md-3 col-xs-6">
+                    <div class="circle-avatar" onmouseenter="$('#ct9').css('color','white')" onmouseleave="$('#ct9').css('color','transparent')" style="background-image:url(http://placekitten.com/g/200/400)"></div>
+                    <div id="ct9" class="circle-text vertical-align">
+                        <div class="center">Luke Harries
+                            <br />President</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-xs-6">
+                    <div class="circle-avatar" onmouseenter="$('#ct10').css('color','white')" onmouseleave="$('#ct10').css('color','transparent')" style="background-image:url(http://placekitten.com/g/200/400)"></div>
+                    <div id="ct10" class="circle-text vertical-align">
+                        <div class="center">Luke Harries
+                            <br />President</div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            </div>
+        </div>
+    </main>
+    <!--footer-->
+    <!--!= partial("_partials/footer")-->
+    <copyright>
+        <br/>
+        <div class="center grayfont">© 2016 Cambridge University StartUp Society</div>
+    </copyright>
+</body>
+
+</html>

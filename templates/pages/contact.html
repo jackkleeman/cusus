@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scaleable=0" />
+    <title>CUSUS</title>
+    <link rel="stylesheet" href="../../static/css/global.css" />
+    <script src="../../static/js/jquery/jquery.js"></script>
+    <script src="../../static/js/bootstrap/bootstrap.min.js">
+    </script>
+    <script src="../../static/js/bootstrap-hover-dropdown.min.js">
+    </script>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans|Source+Code+Pro" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <header></header>
+    <div class="container-fluid">
+        <div class="row visible-xs hidden-xm">
+        <center>
+            <a href="index"><img src="../../static/images/cusus.png" width="60%" /></a>
+            </center>
+        </div>
+        <div class="row">
+            <div class="col-md-1 hidden-xs"></div>
+            <div class="col-md-10 col-xs-12">
+                <div class="row vertical-align">
+                    <div class="col-sm-3 nopadding hidden-xs">
+                        <a href="index"><img src="../../static/images/cusus.png" width="100%" /></a>
+                    </div>
+                    <div class="row col-sm-9 col-xs-12 nopadding">
+                        <div class="col-md-3 menublock menuhome"><a href="{{ url_for('home') }}" id="home" class="btn nopadding btn-link menu">Home</a></div>
+                        <div class="col-md-3 menublock"><a href="{{ url_for('about') }}" id="about" class="btn nopadding btn-link menu">Committee</a></div>
+                        <div class="col-md-3 menublock"><a href="{{ url_for('blogging.index') }}" id="events" class="btn nopadding btn-link menu">Events</a></div>
+                        <div class="col-md-3 menublock"><a href="{{ url_for('contact') }}" id="contact" class="btn nopadding btn-link menu">Contact</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main>
+        <script type="text/javascript">
+        document.getElementById("contact").style.color = '#2798f7';
+        </script>
+        <div class="container-fluid blue tel">
+            <br>
+            <br>
+            <div class="huge center">jack@example.com</div>
+            <br>
+            <br>
+        </div>
+        <div class="container-fluid">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="center">
+                    <h1 style="margin-bottom:18px">QUICK ENQUIRY</h1></div>
+                <div class="row">
+                    <form action="https://formspree.io/htmlperson@gmail.com" method="POST">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" placeholder="Name" name="name" class="form-control">
+                                <input type="text" placeholder="Email" name="email" class="form-control">
+                                <input type="text" placeholder="Phone" name="tel" class="form-control">
+                                <input type="text" placeholder="Subject" name="subject" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <textarea placeholder="Message" style="height:148px" name="message" class="form-control"></textarea>
+                                <button type="submit" style="float:right" class="btn btn-link">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </main>
+    <!--footer-->
+    <!--!= partial("_partials/footer")-->
+    <copyright>
+        <br/>
+        <div class="center grayfont">© 2016 Cambridge University StartUp Society</div>
+    </copyright>
+</body>
+
+</html>
