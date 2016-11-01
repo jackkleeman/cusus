@@ -103,7 +103,7 @@ if not app.debug:
 
 # Default port:
 if __name__ == "__main__":
-    app.run(debug=True, port=8000, use_reloader=True)
+    app.run(debug=True, port=5000, use_reloader=True)
 
 # Or specify port manually:
 '''
