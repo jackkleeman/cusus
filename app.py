@@ -2,9 +2,10 @@
 # Imports
 #----------------------------------------------------------------------------#
 
-from flask import Flask, render_template, request, redirect, session
+from flask import Flask, render_template, request, redirect, session, Response
 from flask_login import UserMixin, LoginManager, \
     login_user, logout_user
+from functools import wraps
 from flask_blogging import SQLAStorage, BloggingEngine
 from sqlalchemy import create_engine, MetaData
 import logging
@@ -31,6 +32,29 @@ bengine = app.extensions["blogging"]
 def shutdown_session(exception=None):
     db_session.remove()
 '''
+def check_auth(username, password):
+    """This function is called to check if a username /
+    password combination is valid.
+    """
+    return username == 'admin' and password == 'cusus'
+
+
+def authenticate():
+    """Sends a 401 response that enables basic auth"""
+    return Response(
+        'Could not verify your access level for that URL.\n'
+        'You have to login with proper credentials', 401,
+        {'WWW-Authenticate': 'Basic realm="Login Required"'})
+
+
+def requires_auth(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        auth = request.authorization
+        if not auth or not check_auth(auth.username, auth.password):
+            return authenticate()
+        return f(*args, **kwargs)
+    return decorated
 
 # user class for providing authentication
 class User(UserMixin):
@@ -53,22 +77,23 @@ def load_user(user_id):
 @app.route('/')
 def home():
     lastpost = sql_storage.get_posts(count=1)
-    print(lastpost)
     session['title'] = lastpost[0]['title']
     session['post_id'] = lastpost[0]['post_id']
     return render_template('pages/index.html', session=session)
 
-@app.route('/about')
+@app.route('/about/')
 def about():
     return render_template('pages/about.html')
 
-@app.route('/contact')
+@app.route('/contact/')
 def contact():
     return render_template('pages/contact.html')
 
+
 @app.route("/login/")
+@requires_auth
 def login():
-    user = User("testuser")
+    user = User("admin")
     login_user(user)
     return redirect("/events")
 
