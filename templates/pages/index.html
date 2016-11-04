@@ -63,12 +63,14 @@
                         </div>
                     </div>
                     <br>
+                    {% if session.post_id %}
                     <div class="row">
                         <div class="center h5 line">
                             Next event: <a href="{{ url_for('blogging.page_by_id', post_id=session.post_id) }}">{{ session.title }}</a>
                         </div>
                     </div>
                     <br>
+                    {% endif %}
                 </div>
                 <br>
             </div>

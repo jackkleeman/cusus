@@ -77,8 +77,9 @@ def load_user(user_id):
 @app.route('/')
 def home():
     lastpost = sql_storage.get_posts(count=1)
-    session['title'] = lastpost[0]['title']
-    session['post_id'] = lastpost[0]['post_id']
+    if lastpost:
+        session['title'] = lastpost[0]['title']
+        session['post_id'] = lastpost[0]['post_id']
     return render_template('pages/index.html', session=session)
 
 @app.route('/about/')
