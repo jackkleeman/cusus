@@ -62,17 +62,39 @@
                             <div class="center h5 line">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut non ipsum semper, euismod neque vitae, maximus mi. Vestibulum sem lorem, faucibus vel lobortis ac, finibus ac nunc. Curabitur facilisis finibus neque non egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac neque at massa dapibus venenatis. Nulla aliquam, urna non vulputate maximus, quam est vestibulum elit, consectetur congue libero quam at turpis. Proin id aliquet odio. Quisque faucibus pulvinar augue id imperdiet. Cras venenatis tortor leo, sed rutrum orci interdum eu. In sodales tellus suscipit nibh mattis, a blandit dolor porta. In sit amet accumsan tellus, vitae sodales mi. Quisque ultricies ut nunc at imperdiet. Integer at consequat ante. </div>
                         </div>
                     </div>
-                    <br>
-                    {% if session.post_id %}
+                    <br> {% if session.post_id %}
                     <div class="row">
                         <div class="center h5 line">
                             Next event: <a href="{{ url_for('blogging.page_by_id', post_id=session.post_id) }}">{{ session.title }}</a>
                         </div>
                     </div>
-                    <br>
-                    {% endif %}
+                    <br> {% endif %}
                 </div>
                 <br>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row vertical-align" height=200px>
+                <div class="col-md-2"></div>
+
+                <div class="col-md-2">
+                    <center><img class="img-responsive center-block" src="../../static/images/teamfirst.png" width=200px></center>
+                    </div>
+
+                <div class="col-md-2">
+
+                    <center><img class="img-responsive center-block" src="../../static/images/agora.png" width=200px></center>
+                    </div>
+
+                <div class="col-md-2">
+
+                    <center><img class="img-responsive center-block" src="../../static/images/encore.png" width=200px></center>
+                    </div>
+
+                <div class="col-md-2">
+
+                    <center><img class="img-responsive center-block" src="../../static/images/rend.jpg" width=200px></center>
+                    </div>
             </div>
         </div>
     </main>
